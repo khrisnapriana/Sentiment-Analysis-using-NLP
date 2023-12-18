@@ -65,6 +65,6 @@ print("Test Accuracy:", eval_result[1])
 #Save model h5
 model.save('save_model75.h5')
 
-# Saving the tokenizer
+#Save tokenizer
 with open('tokenization75.pickle', 'wb') as handle:
     pickle.dump(tokenizer, handle, protocol=pickle.HIGHEST_PROTOCOL)

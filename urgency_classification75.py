@@ -54,10 +54,13 @@ model = tf.keras.Sequential([
 
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
+#Early stopping
 es = EarlyStopping(monitor='val_loss', patience=10, verbose=1, restore_best_weights=True)
 
+#Train model
 model.fit(train_pad, train_label, epochs=50, batch_size=32, validation_data=(test_pad, test_label), callbacks=[es])
 
+#Print result
 eval_result = model.evaluate(test_pad, test_label)
 print("Test Loss:", eval_result[0])
 print("Test Accuracy:", eval_result[1])

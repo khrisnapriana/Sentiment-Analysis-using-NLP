@@ -1,2 +1,2 @@
-runtime: python 3.11.5
+runtime: python311
 service: ml

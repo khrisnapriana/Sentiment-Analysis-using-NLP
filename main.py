@@ -20,6 +20,10 @@ app = FastAPI()
 class InputData(BaseModel):
     complaint: str
 
+@app.get("/")
+def test_deploy():
+    return {"PredictAPI finally deployed"}
+
 @app.post("/predict")
 def predict(data: InputData):
 

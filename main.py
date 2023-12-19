@@ -46,4 +46,4 @@ def predict(data: InputData):
     percentage = round(predict_value[0][0] * 100, 2)
     urgency = "Urgent" if predict_value[0][0] > 0.5 else "Not Urgent"
 
-    return {"percentage (%)": percentage, "urgency": urgency}
+    return {"percentage": percentage, "urgency": urgency}
